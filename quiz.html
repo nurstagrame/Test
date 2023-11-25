@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abai Kunanbayev Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options button {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+        }
+
+        .incorrect-answer {
+            color: red;
+            font-weight: bold;
+        }
+
+        .correct-answer-message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .footer {
+    background-color: lightgrey;
+    color: #333;
+    padding: 50px 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-info {
+    flex: 1 1 300px;
+}
+
+.footer-info h2 {
+    color: navy;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: 16px;
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">Abay Kunanbayev</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="quiz.html">Quiz</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+<div class="container">
+    <h2 class="text-center">Abai Kunanbayev Quiz</h2>
+
+    <div class="question" id="question1">
+        <p>1. What is the real name of Abai Kunanbaev?</p>
+        <div class="options">
+            <button onclick="checkAnswer(1, 'd')">a. Izim</button>
+            <button onclick="checkAnswer(1, 'd')">b. Mirzhakyp</button>
+            <button onclick="checkAnswer(1, 'd')">c. Azim</button>
+            <button onclick="checkAnswer(1, 'd')">d. Ibrahim</button>
+        </div>
+        <p class="correct-answer-message" id="correctAnswerMessage1"></p>
+    </div>
+
+    <div class="question" id="question2">
+        <p>2. In what year was Abai Kunanbayev born?</p>
+        <div class="options">
+            <button onclick="checkAnswer(2, 'c')">a. 1839</button>
+            <button onclick="checkAnswer(2, 'c')">b. 1842</button>
+            <button onclick="checkAnswer(2, 'c')">c. 1845</button>
+            <button onclick="checkAnswer(2, 'c')">d. 1846</button>
+        </div>
+        <p class="correct-answer-message" id="correctAnswerMessage2"></p>
+    </div>
+
+<div class="question" id="question3">
+    <p>3. Who gave Kunanbayev the nickname Abai? </p>
+    <div class="options">
+        <button onclick="checkAnswer(3, 'a')">a. grandmother</button>
+        <button onclick="checkAnswer(3, 'a')">b. mother</button>
+        <button onclick="checkAnswer(3, 'a')">c. father</button>
+        <button onclick="checkAnswer(3, 'a')">d. teacher</button>
+    </div>
+    <p class="correct-answer-message" id="correctAnswerMessage3"></p>
+</div>
+
+<div class="question" id="question4">
+    <p>4. In his adolescence, Abai Kunanbaev studied:</p>
+    <div class="options">
+        <button onclick="checkAnswer(4, 'd')">a. studied public speaking</button>
+        <button onclick="checkAnswer(4, 'd')">b. studied the customs of his people</button>
+        <button onclick="checkAnswer(4, 'd')">c. studied folk poetry</button>
+        <button onclick="checkAnswer(4, 'd')">d. all answers are wrong</button>
+    </div>
+    <p class="correct-answer-message" id="correctAnswerMessage4"></p>
+</div>
+
+    <div class="question" id="question5">
+        <p>5. How many poems did Kunanbayev create?</p>
+        <div class="options">
+            <button onclick="checkAnswer(5, 'c')">a. less than 50</button>
+            <button onclick="checkAnswer(5, 'c')">b. less than 100</button>
+            <button onclick="checkAnswer(5, 'c')">c. more than 170</button>
+            <button onclick="checkAnswer(5, 'c')">d.  about 1000</button>
+        </div>
+        <p class="correct-answer-message" id="correctAnswerMessage5"></p>
+    </div>
+
+</div>
+
+<br><br>
+
+<footer class="footer">
+    <div class="max-width">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h2>Amina Nurumbekova</h2>
+                <p>MT-2201</p>
+                <p>Email: a-nurumbekova@mail.ru</p>
+                <p>Telegram: nurstagrame</p>
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-6oOrkL5M0Or9t1z98AEMF1b5NEWT5G50k1sKll9Lpv4hqzmi5u6hRjMnmPVW7F9s" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+    function checkAnswer(questionNumber, correctAnswer) {
+        var selectedButton = $(`#question${questionNumber} button:contains(${correctAnswer})`);
+        var correctAnswerMessage = $(`#correctAnswerMessage${questionNumber}`);
+
+        $(`#question${questionNumber} button`).attr('disabled', true);
+
+        if (selectedButton.length > 0) {
+            selectedButton.addClass('correct-answer');
+            animateCorrectAnswer(selectedButton);
+            correctAnswerMessage.text('Correct Answer: ' + correctAnswer);
+        } else {
+            $(`#question${questionNumber} button`).addClass('incorrect-answer');
+            correctAnswerMessage.text('Correct Answer: ' + correctAnswer);
+        }
+    }
+
+    function animateCorrectAnswer(element) {
+        element.animate({ backgroundColor: 'green' }, 500, 'linear', function () {
+            $(this).animate({ backgroundColor: 'transparent' }, 500);
+        });
+    }
+</script>
+
+</body>
+</html>
